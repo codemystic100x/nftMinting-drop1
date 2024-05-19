@@ -19,6 +19,7 @@ const Header = () => {
       },
     }),
   ];
+
   return (
     <header className='items-center flex justify-between'>
       <h1 className='w-52 cursor-pointer text-xl font-normal sm:w-80'>

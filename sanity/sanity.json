@@ -1,0 +1,40 @@
+{
+  "root": true,
+  "project": {
+    "name": "nft-minting"
+  },
+  "api": {
+    "projectId": "xk79w49k",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "@sanity/vision"
+  ],
+  "env": {
+    "development": {
+      "plugins": ["@sanity/vision", "@sanity/base"]
+    }
+  },
+  "paths": {
+    "source": "./src",
+    "compiled": "./lib"
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    },
+    {
+      "name": "part:@sanity/base/components/unicorn-slider",
+      "description": "React component which provides a slider input"
+    },
+    {
+      "implements": "part:@sanity/base/components/unicorn-slider",
+      "path": "components/Slider.js"
+    }
+  ]
+}
